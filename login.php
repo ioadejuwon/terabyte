@@ -1,6 +1,9 @@
 <?php
 include_once "inc/auth.php"; 
 include_once "head.php"; 
+
+$pagetitle = "Login";
+
 // include_once "header.php"; 
 
 ?>

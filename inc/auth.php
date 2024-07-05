@@ -95,7 +95,7 @@ if(isset($_POST['signup'])){
                     echo "I inserted into users here";
                     
                     $_SESSION['unique_id'] = $unique_id;
-                    header("location: dashboard.php?id=".$unique_id);
+                    header("location: ".DASHBOARD."?id=".$unique_id);
 
                     mysqli_stmt_close($stmt); // Close the statement before opening another one
                     exit();

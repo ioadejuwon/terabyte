@@ -88,13 +88,13 @@
   --color-white: #FFFFFF;
   --color-black: #000000;
   --color-dark-1: #013044;
-  --color-dark-2: #1A064F;
-  --color-dark-3: #6A7A99;
-  --color-dark-4: #242239;
-  --color-dark-5: #094c67;
-  --color-dark-6: #311F61;
+  --color-dark-2: #013044;
+  --color-dark-3: #013044;
+  --color-dark-4: #013044;
+  --color-dark-5: #013044;
+  --color-dark-6: #013044;
   --color-dark-7: #EAE9EF;
-  --color-dark-8: #202124;
+  --color-dark-8: #013044;
   --color-light-1: #4F547B;
   --color-light-2: #E4E7EA;
   --color-light-3: #EEF2F6;
@@ -1091,8 +1091,8 @@ html.-dark-mode .-dark-d-none {
 
 html.-dark-mode {
   --color-dark-1: #FFF !important;
-  --color-light-3: #2B1C55 !important;
-  --color-light-4: #2B1C55 !important;
+  --color-light-3: #025172 !important;
+  --color-light-4: #025172 !important;
   --color-light-5: #2B1C55 !important;
   --color-light-6: #2B1C55 !important;
   --color-light-9: #2B1C55 !important;
@@ -1100,7 +1100,7 @@ html.-dark-mode {
 }
 
 html.-dark-mode body {
-  background-color: #140342 !important;
+  background-color: #013044 !important;
   color: var(--color-dark-3) !important;
 }
 

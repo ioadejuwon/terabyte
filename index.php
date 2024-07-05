@@ -4,6 +4,9 @@
     // include_once "inc/function2.php";
 
     session_start();
+
+    $pagetitle = "Home";
+
     include_once "head.php"; 
     include_once "header.php"; 
     echo $unique_id;

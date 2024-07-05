@@ -1,41 +1,72 @@
 <?php 
     session_start();
+    
+
+    include_once "../inc/config.php"; 
+    include_once "../inc/drc.php"; 
+
+    
 
     if(!isset($_SESSION['unique_id'])){
-        header("location: login?url=".$current_url."&t=".$pagetitle);// redirect to login page if not signed in
+        header("location: ".LOGIN."?url=".$current_url."&t=".$pagetitle);// redirect to login page if not signed in
         exit; // Make sure to exit after sending the redirection header
     }else{
         $unique_id = $_SESSION['unique_id'];
         
     }
     
-    include_once "head.php"; 
-    include_once "header.php"; 
+    $pagetitle = "Dashboard";
+    
+    include_once "dash-head.php"; 
+    include_once "dash-header.php"; 
+    // include_once "../inc/drc.php"; 
+
+
+    $sql = mysqli_query($conn, "SELECT * FROM tera_users WHERE unique_id = '{$_SESSION['unique_id']}'");
+    $row = mysqli_fetch_assoc($sql);
+    $unique_id = $row["unique_id"];
+
+    $instructor = $row["instructor"];
+    $admin = $row["admin"];
 
 ?>
-            
+
+
+
+
+
+
+      <div class="content-wrapper js-content-wrapper">
         <div class="dashboard -home-9 js-dashboard-home-9">
+            
           <div class="dashboard__sidebar scroll-bar-1">
 
 
             <div class="sidebar -dashboard">
 
               <div class="sidebar__item -is-active -dark-bg-dark-2">
-                <a href="dashboard.html" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
+                <a href="<?php echo DASHBOARD ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
                   <i class="text-20 icon-discovery mr-15"></i>
                   Dashboard
                 </a>
               </div>
 
               <div class="sidebar__item ">
-                <a href="dshb-courses.html" class="d-flex items-center text-17 lh-1 fw-500 ">
+                <a href="<?php echo MY_COURSES ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
                   <i class="text-20 icon-play-button mr-15"></i>
                   My Courses
                 </a>
               </div>
 
               <div class="sidebar__item ">
-                <a href="dshb-bookmarks.html" class="d-flex items-center text-17 lh-1 fw-500 ">
+                <a href="<?php echo PROFILE ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
+                  <i class="text-20 icon-bookmark mr-15"></i>
+                  Profile
+                </a>
+              </div>
+              
+              <div class="sidebar__item ">
+                <a href="<?php echo BOOKMARK ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
                   <i class="text-20 icon-bookmark mr-15"></i>
                   Bookmarks
                 </a>
@@ -48,12 +79,15 @@
                 </a>
               </div>
 
-              <div class="sidebar__item ">
-                <a href="dshb-listing.html" class="d-flex items-center text-17 lh-1 fw-500 ">
-                  <i class="text-20 icon-list mr-15"></i>
-                  Create Course
-                </a>
-              </div>
+              <?php if ($instructor == 1 || $admin == 1): ?>
+                  <div class="sidebar__item">
+                      <a href="dshb-listing.html" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
+                          <i class="text-20 icon-list mr-15"></i>
+                          Create Course
+                      </a>
+                  </div>
+              <?php endif; ?>
+              
 
               <div class="sidebar__item ">
                 <a href="dshb-reviews.html" class="d-flex items-center text-17 lh-1 fw-500 ">
@@ -62,15 +96,9 @@
                 </a>
               </div>
 
-              <div class="sidebar__item ">
-                <a href="dshb-settings.html" class="d-flex items-center text-17 lh-1 fw-500 ">
-                  <i class="text-20 icon-setting mr-15"></i>
-                  Settings
-                </a>
-              </div>
 
               <div class="sidebar__item ">
-                <a href="#" class="d-flex items-center text-17 lh-1 fw-500 ">
+                <a href="<?php echo LOGOUT ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
                   <i class="text-20 icon-power mr-15"></i>
                   Logout
                 </a>
@@ -83,18 +111,30 @@
 
           <div class="dashboard__main">
             <div class="dashboard__content bg-light-4">
-              <div class="row pb-50 mb-10">
+            <div class="row pb-50 mb-10">
                 <div class="col-auto">
 
                   <h1 class="text-30 lh-12 fw-700">Dashboard</h1>
-                  <div class="mt-10">Lorem ipsum dolor sit amet, consectetur.</div>
+
+                  <div class="breadcrumbs mt-10 pt-0 pb-0">
+                    <div class="breadcrumbs__content">
+                      <div class="breadcrumbs__item">
+                        <a href="index.html">Home</a>
+                      </div>
+                      <div class="breadcrumbs__item">
+                        <a href="<?php DASHBOARD ?>">Dashboard</a>
+                      </div>
+                      
+                    </div>
+                  </div>
 
                 </div>
               </div>
 
 
               <div class="row y-gap-30">
-
+                
+                
                 <div class="col-xl-3 col-md-6">
                   <div class="d-flex justify-between items-center py-35 px-30 rounded-16 bg-white -dark-bg-dark-1 shadow-4">
                     <div>
@@ -136,7 +176,7 @@
                     <div>
                       <div class="lh-1 fw-500">Total Instructor</div>
                       <div class="text-24 lh-1 fw-700 text-dark-1 mt-20">22,786</div>
-                      <div class="lh-1 mt-25"><span class="text-purple-1">290+</span> New Instructors</div>
+                      <div class="lh-1 mt-25"><span class="text-purple-1">290+</span> Instructors</div>
                     </div>
 
                     <i class="text-40 icon-online-learning text-purple-1"></i>
@@ -176,7 +216,7 @@
                       </div>
                     </div>
                     <div class="py-40 px-30">
-                      <canvas id="lineChart"></canvas>
+                      <!-- <canvas id="lineChart"></canvas> -->
                     </div>
                   </div>
                 </div>
@@ -211,7 +251,7 @@
                       </div>
                     </div>
                     <div class="py-40 px-30">
-                      <canvas id="pieChart"></canvas>
+                      <!-- <canvas id="pieChart"></canvas> -->
                     </div>
                   </div>
                 </div>
@@ -228,7 +268,7 @@
                       <div class="y-gap-40">
 
                         <div class="d-flex ">
-                          <img class="size-40" src="assets/img/dashboard/avatars/1.png" alt="avatar">
+                          <img class="size-40" src="../assets/img/dashboard/avatars/1.png" alt="avatar">
                           <div class="ml-10 w-1/1">
                             <h4 class="text-15 lh-1 fw-500">Marvin McKinney</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
@@ -249,7 +289,7 @@
                         </div>
 
                         <div class="d-flex border-top-light">
-                          <img class="size-40" src="assets/img/dashboard/avatars/2.png" alt="avatar">
+                          <img class="size-40" src="../assets/img/dashboard/avatars/2.png" alt="avatar">
                           <div class="ml-10 w-1/1">
                             <h4 class="text-15 lh-1 fw-500">Albert Flores</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
@@ -270,7 +310,7 @@
                         </div>
 
                         <div class="d-flex border-top-light">
-                          <img class="size-40" src="assets/img/dashboard/avatars/3.png" alt="avatar">
+                          <img class="size-40" src="../assets/img/dashboard/avatars/3.png" alt="avatar">
                           <div class="ml-10 w-1/1">
                             <h4 class="text-15 lh-1 fw-500">Savannah Nguyen</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
@@ -291,7 +331,7 @@
                         </div>
 
                         <div class="d-flex border-top-light">
-                          <img class="size-40" src="assets/img/dashboard/avatars/4.png" alt="avatar">
+                          <img class="size-40" src="../assets/img/dashboard/avatars/4.png" alt="avatar">
                           <div class="ml-10 w-1/1">
                             <h4 class="text-15 lh-1 fw-500">Guy Hawkins</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
@@ -312,7 +352,7 @@
                         </div>
 
                         <div class="d-flex border-top-light">
-                          <img class="size-40" src="assets/img/dashboard/avatars/5.png" alt="avatar">
+                          <img class="size-40" src="../assets/img/dashboard/avatars/5.png" alt="avatar">
                           <div class="ml-10 w-1/1">
                             <h4 class="text-15 lh-1 fw-500">Guy Hawkins</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
@@ -348,13 +388,13 @@
 
                         <div class="d-flex ">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/recent-courses/1.png" alt="image">
+                            <img src="../assets/img/dashboard/recent-courses/1.png" alt="image">
                           </div>
                           <div class="ml-15">
                             <h4 class="text-15 lh-16 fw-500">Complete Python Bootcamp From Zero to Hero in Python</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
                               <div class="d-flex items-center">
-                                <img class="size-16 object-cover mr-8" src="assets/img/general/avatar-1.png" alt="icon">
+                                <img class="size-16 object-cover mr-8" src="../assets/img/general/avatar-1.png" alt="icon">
                                 <div class="text-14 lh-1">Ali Tufan</div>
                               </div>
                               <div class="d-flex items-center">
@@ -371,13 +411,13 @@
 
                         <div class="d-flex border-top-light">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/recent-courses/2.png" alt="image">
+                            <img src="../assets/img/dashboard/recent-courses/2.png" alt="image">
                           </div>
                           <div class="ml-15">
                             <h4 class="text-15 lh-16 fw-500">The Ultimate Drawing Course Beginner to Advanced</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
                               <div class="d-flex items-center">
-                                <img class="size-16 object-cover mr-8" src="assets/img/general/avatar-1.png" alt="icon">
+                                <img class="size-16 object-cover mr-8" src="../assets/img/general/avatar-1.png" alt="icon">
                                 <div class="text-14 lh-1">Ali Tufan</div>
                               </div>
                               <div class="d-flex items-center">
@@ -394,13 +434,13 @@
 
                         <div class="d-flex border-top-light">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/recent-courses/3.png" alt="image">
+                            <img src="../assets/img/dashboard/recent-courses/3.png" alt="image">
                           </div>
                           <div class="ml-15">
                             <h4 class="text-15 lh-16 fw-500">Instagram Marketing 2021: Complete Guide To Instagram Growth</h4>
                             <div class="d-flex items-center x-gap-20 y-gap-10 flex-wrap pt-10">
                               <div class="d-flex items-center">
-                                <img class="size-16 object-cover mr-8" src="assets/img/general/avatar-1.png" alt="icon">
+                                <img class="size-16 object-cover mr-8" src="../assets/img/general/avatar-1.png" alt="icon">
                                 <div class="text-14 lh-1">Ali Tufan</div>
                               </div>
                               <div class="d-flex items-center">
@@ -430,7 +470,7 @@
 
                         <div class="d-flex items-center ">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/actions/1.png" alt="image">
+                            <img src="../assets/img/dashboard/actions/1.png" alt="image">
                           </div>
                           <div class="ml-12">
                             <h4 class="text-15 lh-1 fw-500">Your resume updated!</h4>
@@ -440,7 +480,7 @@
 
                         <div class="d-flex items-center border-top-light">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/actions/2.png" alt="image">
+                            <img src="../assets/img/dashboard/actions/2.png" alt="image">
                           </div>
                           <div class="ml-12">
                             <h4 class="text-15 lh-1 fw-500">You changed password</h4>
@@ -450,7 +490,7 @@
 
                         <div class="d-flex items-center border-top-light">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/actions/3.png" alt="image">
+                            <img src="../assets/img/dashboard/actions/3.png" alt="image">
                           </div>
                           <div class="ml-12">
                             <h4 class="text-15 lh-1 fw-500">Your account has been created successfully</h4>
@@ -460,7 +500,7 @@
 
                         <div class="d-flex items-center border-top-light">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/actions/4.png" alt="image">
+                            <img src="../assets/img/dashboard/actions/4.png" alt="image">
                           </div>
                           <div class="ml-12">
                             <h4 class="text-15 lh-1 fw-500">You applied for a job Front-end Developer</h4>
@@ -470,7 +510,7 @@
 
                         <div class="d-flex items-center border-top-light">
                           <div class="shrink-0">
-                            <img src="assets/img/dashboard/actions/5.png" alt="image">
+                            <img src="../assets/img/dashboard/actions/5.png" alt="image">
                           </div>
                           <div class="ml-12">
                             <h4 class="text-15 lh-1 fw-500">Your course uploaded successfully</h4>
@@ -486,43 +526,12 @@
 
             </div>
 
-            <footer class="footer -dashboard py-30">
-              <div class="row items-center justify-between">
-                <div class="col-auto">
-                  <div class="text-13 lh-1">© 2022 Educrat. All Right Reserved.</div>
-                </div>
 
-                <div class="col-auto">
-                  <div class="d-flex items-center">
-                    <div class="d-flex items-center flex-wrap x-gap-20">
-                      <div>
-                        <a href="help-center.html" class="text-13 lh-1">Help</a>
-                      </div>
-                      <div>
-                        <a href="terms.html" class="text-13 lh-1">Privacy Policy</a>
-                      </div>
-                      <div>
-                        <a href="#" class="text-13 lh-1">Cookie Notice</a>
-                      </div>
-                      <div>
-                        <a href="#" class="text-13 lh-1">Security</a>
-                      </div>
-                      <div>
-                        <a href="terms.html" class="text-13 lh-1">Terms of Use</a>
-                      </div>
-                    </div>
 
-                    <button class="button -md -rounded bg-light-4 text-light-1 ml-30">English</button>
-                  </div>
-                </div>
-              </div>
-            </footer>
-          </div>
-        </div>
     
-            
+
             
 <?php 
-    // include_once "footer.php"; 
-    include_once "tail.php"; 
+    include_once "dash-footer.php"; 
+    include_once "dash-tail.php"; 
 ?>

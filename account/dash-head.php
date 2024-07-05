@@ -1,14 +1,14 @@
 <?php
-    include_once "inc/config.php"; 
-    include_once "inc/drc.php"; 
+    include_once "../inc/config.php"; 
+    include_once "../inc/drc.php"; 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     
+
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,39 +36,37 @@
     <!-- <meta name="facebook-domain-verification" content="znfjwpevns3jhyzsnxuulz5q86paei"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta name="viewport" content="height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    
-    
+
     <!-- Google fonts -->
-    <link rel="preconnect" href="assets/fonts.googleapis.com/index.html">
-    <link rel="preconnect" href="assets/fonts.gstatic.com/index.html" crossorigin>
-    
-    <link rel="stylesheet" href="assets/unpkg.com/leaflet%401.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="preconnect" href="../assets/fonts.googleapis.com/index.html">
+    <link rel="preconnect" href="../assets/fonts.gstatic.com/index.html" crossorigin>
+    <link href="../assets/fonts.googleapis.com/css2dec5.css?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+
+    <link href="../assets/fonts.googleapis.com/css2f511.css?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/unpkg.com/leaflet%401.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/vendors.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/vendors.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
-    <link rel="stylesheet" href="assets/css/component.css">
-    
-    <title><?php echo $pagetitle; ?> - Terabyte</title>
-    
+    <link rel="stylesheet" href="../assets/css/component.css">
 
     <!-- Page loading scripts-->
     <script src="assets/js/page-loader.js"></script>
+    <title><?php echo $pagetitle; ?> - Terabyte</title>
 </head>
 
+
+
 <body class="preloader-visible" data-barba="wrapper">
-    <!-- preloader start -->
-    <div class="progress-container js-preloadr">
+     <!-- preloader start -->
+     <div class="progress-container js-preloader">
         <div class="progress-bar"></div>
     </div>
     <!-- preloader end -->
 
-    
-    <main class="main-content  " >
-
-        
-        <!-- <div class="content-wrapper  js-content-wrapper" ></div> -->
+    <!-- barba container start -->
+    <div class="barba-container" data-barba="container">
+        <main class="main-content">

@@ -3,6 +3,8 @@ include_once "inc/auth.php";
 include_once "head.php"; 
 // include_once "header.php"; 
 
+$pagetitle = "Signup";
+
 ?>
 
 
@@ -62,7 +64,7 @@ include_once "head.php";
                   </div>
                 </div>
 
-                <p class=" fw-300 text-error-1" style="">
+                <p class=" fw-300 text-error-1">
                     <?php echo $error; ?>
                 </p>
 
