@@ -15,7 +15,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost:8888') {
     define('LOGOUT', BASE_URL.'logout.php?id='.$unique_id);
 } else {
     // Hosting environment
-    define('BASE_URL', 'https://hmvl.bio/tb/');
+    define('BASE_URL', 'https://mvl.bio/tb/');
     // define('BASE_URL', 'https://terabyte.africa/');
 
 
