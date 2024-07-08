@@ -20,9 +20,9 @@
             </div>
 
             <div class="header__logo ml-30 md:ml-20">
-                <a data-barba href="index.html">
-                <img class="-light-d-none" src="../assets/img/general/logo.svg" alt="logo">
-                <img class="-dark-d-none" src="../assets/img/general/logo-dark.svg" alt="logo">
+                <a data-barba href="<?php echo BASE_URL ?>">
+                <img class="-light-d-none" src="../assets/img/logo_wh.svg" alt="logo">
+                <img class="-dark-d-none" src="../assets/img/logo_dg.svg" alt="logo" style="width:40%">
                 </a>
             </div>
             </div>
