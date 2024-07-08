@@ -122,6 +122,7 @@ form.input-form.-light p {
 form.input-form.-light select,
 form.input-form.-light input[type="text"],
 form.input-form.-light input[type="search"],
+form.input-form.-light input[type="file"],
 form.input-form.-light textarea,
 form.input-form.-light input[type="email"] {
   color: white;

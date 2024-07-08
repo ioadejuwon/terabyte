@@ -3,6 +3,7 @@
     
 
     include_once "../inc/config.php"; 
+    $pagetitle = "Add New Course";
     include_once "../inc/drc.php"; 
 
     
@@ -15,7 +16,7 @@
         
     }
     
-    $pagetitle = "Add New Course";
+    
     
     include_once "dash-head.php"; 
     include_once "dash-header.php"; 

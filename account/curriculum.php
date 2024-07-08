@@ -227,11 +227,22 @@
 
                                           </div>
 
-                                          <form class="upload-video-form input-form" style="display: none;">
-                                              <input type="file" name="video_file" class="form-control">
-                                              <input type="hidden" name="course_id" value="<?php echo $courseID ?>" class="form-control">
-                                              <button type="submit">Upload</button>
-                                              <button type="button" class="cancel-upload">Cancel</button>
+                                          <form class="upload-video-form input-form mt-20" style="display: none;">
+                                              <div class="col-6">
+                                                <input type="text" placeholder="Video Name" name="video_name" value="" class="form-control">
+                                              </div>
+                                              <div class="col-6">
+                                                <input type="file" placeholder="Click here to Upload video" name="video_file" class="form-control" >
+                                                <input type="hidden" name="course_id" value="<?php echo $courseID ?>" class="form-control" >
+                                              </div>
+                                              
+
+                                              <div class="d-flex x-gap-10 y-gap-10 flex-wrap mt-20">
+                                              <button type="submit" class=" button -sm py-15  -terabyte-1 text-white mr-10">Upload</button>
+                                              <button type="button" class="cancel-upload button -sm py-15  -outline-terabyte-1 text-terabyte-1 ">Cancel</button>
+                                                  <a href="#" class="button -sm py-15 -purple-3 text-purple-1 fw-500 d-none">Add Video +</a>
+                                              </div>
+                                              
                                           </form>
                                           <div class="d-flex x-gap-10 y-gap-10 flex-wrap mt-20">
                                               <a href="#" class="button -sm py-15 -purple-3 text-purple-1 fw-500 add-video" data-id="<?php echo $section_id; ?>">Add Video +</a>
