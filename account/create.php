@@ -70,6 +70,15 @@
                   </div>
               <?php endif; ?>
 
+              <?php if ($admin == 1): ?>
+                  <div class="sidebar__item">
+                      <a href="<?php echo CATEGORIES?>" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
+                          <i class="text-20 icon-list mr-15"></i>
+                          Category
+                      </a>
+                  </div>
+              <?php endif; ?>
+
               <div class="sidebar__item ">
                 <a href="<?php echo PROFILE ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
                   <i class="text-20 icon-bookmark mr-15"></i>
@@ -91,7 +100,7 @@
                 </a>
               </div>
 
-             
+            
 
 
               <div class="sidebar__item">
