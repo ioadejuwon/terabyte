@@ -194,14 +194,46 @@
                                         </div>
                                     </div>
                                     <div class="accordion__content">
+
                                       <div class="accordion__content__inner px-30 py-30">
+                                          <div class="y-gap-20">
+
+                                            <?php
+                                            $sql_videos = mysqli_query($conn, "SELECT * FROM tera_course_videos WHERE unique_id = '{$_SESSION['unique_id']}' AND course_id = '$courseID' AND section_id = '$section_id'");
+                                            while ($row_video = mysqli_fetch_assoc($sql_videos)) {
+                                                // $sectionname = $row_section['row_video'];
+                                                // $section_id = $row_section['section_id'];
+                                            ?>
+
+                                              <div class="d-flex justify-between">
+                                                <div class="d-flex items-center">
+                                                  <div class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10">
+                                                    <div class="icon-play text-9"></div>
+                                                  </div>
+                                                  <div>Introduction to the User Experience Course</div>
+                                                </div>
+
+                                                <div class="d-flex x-gap-20 items-center">
+                                                  <!-- <a href="#" class="text-14 lh-1 text-purple-1 underline">Preview</a> -->
+                                                  <!-- <a href="#" class="text-14 lh-1 text-purple-1 underline">5 question</a> -->
+                                                  <span href="#" class="text-14 lh-1 text-purple-1 ">03:56</span>
+                                                </div>
+                                              </div>
+                                            <?php 
+                                            }
+                                            ?>
+
+
+
+                                          </div>
+
                                           <form class="upload-video-form input-form" style="display: none;">
                                               <input type="file" name="video_file" class="form-control">
                                               <input type="hidden" name="course_id" value="<?php echo $courseID ?>" class="form-control">
                                               <button type="submit">Upload</button>
                                               <button type="button" class="cancel-upload">Cancel</button>
                                           </form>
-                                          <div class="d-flex x-gap-10 y-gap-10 flex-wrap">
+                                          <div class="d-flex x-gap-10 y-gap-10 flex-wrap mt-20">
                                               <a href="#" class="button -sm py-15 -purple-3 text-purple-1 fw-500 add-video" data-id="<?php echo $section_id; ?>">Add Video +</a>
                                           </div>
                                       </div>
