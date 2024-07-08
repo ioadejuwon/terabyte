@@ -101,9 +101,10 @@
                                             
                                         </ul>
                                     </li>
-                                    
-                                    
-                                    
+
+                                    <li>
+                                        <a data-barba href="#">Monetize</a>
+                                    </li>
                                     
                                 </ul>
                             </div>
@@ -278,8 +279,33 @@
                             
                             <div class="header-right__buttons d-flex items-center ml-30 md:d-none">
 
-                                <a href="<?php echo LOGIN ?>" class="button -underline text-white">Log in</a>
-                                <a href="<?php echo SIGNUP ?>" class="button -sm -white text-dark-1 ml-30">Sign Up</a>
+                                <a href="<?php echo LOGIN ?>" class="d-none">
+                                    <button class="button -sm -outline-white text-white">
+                                        Log in
+                                    </button>
+                                </a>
+                                <a href="<?php echo SIGNUP ?>" class="button d-none" >
+                                    <div class="button -white text-dark-1 ml-30 w-100" style="padding-left:35% !important; padding-right:35% !important; padding-bottom:10% !important; padding-top:10% !important;">
+                                        Sign Up
+                                    </div>
+                                </a>
+                                <a href="#" class="button -sm d-none " style="padding-bottom:20%; padding-top:20%;">
+                                    <button class=" -outline-white text-white">
+                                        Log in
+                                    </button>
+                                </a>
+
+
+                                <div data-anim-child="slide-up delay-2" class="masthead__buttons row x-gap-10 y-gap-10 is-in-view">
+                                    <div class="col-12 col-sm-auto">
+                                        <a data-barba="" href="<?php echo LOGIN ?>" class="button -sm -outline-white text-white">Log In</a>
+                                    </div>
+                                    <div class="col-12 col-sm-auto">
+                                        <a data-barba="" href="<?php echo SIGNUP ?>" class="button -sm -white text-terabyte-1">Sign Up</a>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>

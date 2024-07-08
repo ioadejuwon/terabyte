@@ -96,8 +96,8 @@
                     
                     <div class="footer-footer border-top-dark">
                         <div class="row justify-between y-gap-20">
-                            <div class="col-md-6">
-                                <div class="footer-footer__copyright">© 2022 Educrat. All Right Reserved.</div>
+                            <div class="col-auto">
+                                <div class="footer-footer__copyright">© <?php echo FOOTERYEAR ?> Terabyte. All Right Reserved.</div>
                             </div>
                             
                             <div class="col-auto">
@@ -105,14 +105,13 @@
                                     <div class="footer-footer__list">
                                         <a href="help-center.html">Help</a>
                                         <a href="terms.html">Privacy Policy</a>
-                                        <a href="terms.html">Cookie Notice</a>
-                                        <a href="terms.html">Security</a>
                                         <a href="terms.html">Terms of Use</a>
                                     </div>
-                                    
-                                    <div class="ml-20">
-                                        <a href="#" class="button -white px-30 py-20 rounded-200 text-black">English</a>
-                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div>
+                                    Designed by <a href="https://martville.app" class="text-13 lh-1">MartVille Technologies</a>
                                 </div>
                             </div>
                         </div>

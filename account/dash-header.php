@@ -1,4 +1,13 @@
+<style>
+.toggle-element {
+    display: none;
+}
 
+.toggle-element.active {
+    display: block;
+}
+
+</style>
 <header class="header -dashboard -dark-bg-dark-1 js-header">
     <div class="header__container py-20 px-30">
         <div class="row justify-between items-center">
@@ -183,7 +192,7 @@
                     <i class="text-24 icon icon-notification"></i>
                 </a>
 
-                <div class="toggle-element js-notif-toggle">
+                <div class="toggle-element js-notif-toggle" >
                     <div class="toggle-bottom -notifications bg-white -dark-bg-dark-1 shadow-4 border-light rounded-8 mt-10">
                     <div class="py-30 px-30">
                         <div class="y-gap-40">
@@ -250,7 +259,7 @@
                 <img class="size-50" src="../assets/img/misc/user-profile.png" alt="image">
                 </a>
 
-                <div class="toggle-element js-profile-toggle">
+                <div class="toggle-element js-profile-toggle"  >
                 <div class="toggle-bottom -profile bg-white -dark-bg-dark-1 shadow-4 border-light rounded-8 mt-10">
                     <div class="px-30 py-30">
 
@@ -323,3 +332,44 @@
         </div>
     </div>
 </header>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggles = document.querySelectorAll("[data-el-toggle]");
+    const toggleElements = document.querySelectorAll(".toggle-element");
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetSelector = this.getAttribute("data-el-toggle");
+            const targetElement = document.querySelector(targetSelector);
+            targetElement.classList.toggle("active");
+
+            // Close other open dropdowns
+            toggleElements.forEach(element => {
+                if (element !== targetElement) {
+                    element.classList.remove("active");
+                }
+            });
+        });
+    });
+
+    document.addEventListener("click", function(event) {
+        let isClickInside = false;
+        toggles.forEach(toggle => {
+            const targetSelector = toggle.getAttribute("data-el-toggle");
+            const targetElement = document.querySelector(targetSelector);
+            if (toggle.contains(event.target) || (targetElement && targetElement.contains(event.target))) {
+                isClickInside = true;
+            }
+        });
+
+        if (!isClickInside) {
+            toggleElements.forEach(element => {
+                element.classList.remove("active");
+            });
+        }
+    });
+});
+
+
+</script>

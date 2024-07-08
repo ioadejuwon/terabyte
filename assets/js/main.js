@@ -1001,7 +1001,7 @@ const Accordion = (function() {
 
         if (items[l].classList.contains('js-accordion-item-active')) {
           items[l].classList.toggle('is-active')
-          content.style.maxHeight = content.scrollHeight + "px"
+          // content.style.maxHeight = content.scrollHeight + "px"
         }
         
         button.addEventListener("click", (e) => {

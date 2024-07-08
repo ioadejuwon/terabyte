@@ -9,7 +9,7 @@ session_start();
 
 $error = null;
 
-// $url = $_GET['url'];
+$url = $_GET['url'];
 
 if (isset($_POST['login'])){
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -33,13 +33,16 @@ if (isset($_POST['login'])){
                 }   
                 
             }else{
-                $error = "Looks like you entered the wrong email address or password!";
+                // $error = "Looks like you entered the wrong email address or password!";
+                $error = "<p class='fw-300 text-error-1'>Looks like you entered the wrong email address or password!</p>"; 
             }
         }else{
-            $error = "Invalid Email address";
+            // $error = "Invalid Email address";
+            $error = "<p class='fw-300 text-error-1'>Invalid Email address.</p>"; 
         } 
     }else{
-        $error = "Please enter your details";
+        // $error = "Please enter your details";
+        $error = "<p class='fw-300 text-error-1'>Please enter your details.</p>"; 
     }
 }elseif(isset($_SESSION['unique_id'])){
     if (!empty($url)) {
@@ -78,10 +81,12 @@ if(isset($_POST['signup'])){
 
             
             if ($resultEmail) { // Check if the email exists
-                $error = "Looks like '".$email."' already exists. Please, try to <a href='".LOGIN."'>log in</a>?"; // Email already exists in the database
+                $error = "<p class='fw-300 text-error-1'>Looks like '".$email."' already exists. Please, try to <a href='".LOGIN."'>log in</a>?</p>"; // Email already exists in the database
                 session_destroy();
             } elseif($cword != $pword){
-                $error =  "Password is not the same as Confirm Password!";
+                // $error =  "Password is not the same as Confirm Password!";
+                $error =  "<p class='fw-300 text-error-1'>Password is not the same as Confirm Password!!</p>";
+
                 session_destroy();
             }else{
                 $pwordhash = password_hash($pword, PASSWORD_BCRYPT); // Encrypt Password 
@@ -100,7 +105,7 @@ if(isset($_POST['signup'])){
                     mysqli_stmt_close($stmt); // Close the statement before opening another one
                     exit();
                 } else {
-                    $error =  "There is an error with one of your inputs!"; // Send an "error" response if the insertion fails
+                    $error =  "<p class='fw-300 text-error-1'>There is an error with one of your inputs!</p>"; // Send an "error" response if the insertion fails
                     session_destroy();
                 }
             }
@@ -110,9 +115,9 @@ if(isset($_POST['signup'])){
         } 
     }             
 }else{
-    // redirect to dashboard if in session (signed in)
-    if(isset($_SESSION['unique_id'])){
-        header("Location: ".DASHBOARD);
-      }
+    // // redirect to dashboard if in session (signed in)
+    // if(isset($_SESSION['unique_id'])){
+    //     header("Location: ".DASHBOARD);
+    //   }
 }
 

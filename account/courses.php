@@ -74,6 +74,15 @@
                 </a>
               </div>
 
+              <?php if ($instructor == 1 || $admin == 1): ?>
+                  <div class="sidebar__item">
+                      <a href="<?php echo CREATE_COURSE?>" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
+                          <i class="text-20 icon-list mr-15"></i>
+                          Create Course
+                      </a>
+                  </div>
+              <?php endif; ?>
+
               <div class="sidebar__item ">
                 <a href="<?php echo PROFILE ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
                   <i class="text-20 icon-bookmark mr-15"></i>
@@ -95,12 +104,7 @@
                 </a>
               </div>
 
-              <div class="sidebar__item d-none">
-                <a href="dshb-listing.html" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
-                  <i class="text-20 icon-list mr-15"></i>
-                  Create Course
-                </a>
-              </div>
+           
 
               <div class="sidebar__item ">
                 <a href="dshb-reviews.html" class="d-flex items-center text-17 lh-1 fw-500 ">

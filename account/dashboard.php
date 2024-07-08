@@ -58,6 +58,24 @@
                 </a>
               </div>
 
+              <?php if ($instructor == 1 || $admin == 1): ?>
+                  <div class="sidebar__item">
+                      <a href="<?php echo CREATE_COURSE?>" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
+                          <i class="text-20 icon-list mr-15"></i>
+                          Create Course
+                      </a>
+                  </div>
+              <?php endif; ?>
+
+              <?php if ($admin == 1): ?>
+                  <div class="sidebar__item">
+                      <a href="<?php echo CATEGORIES?>" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
+                          <i class="text-20 icon-list mr-15"></i>
+                          Category
+                      </a>
+                  </div>
+              <?php endif; ?>
+
               <div class="sidebar__item ">
                 <a href="<?php echo PROFILE ?>" class="d-flex items-center text-17 lh-1 fw-500 ">
                   <i class="text-20 icon-bookmark mr-15"></i>
@@ -79,14 +97,16 @@
                 </a>
               </div>
 
-              <?php if ($instructor == 1 || $admin == 1): ?>
-                  <div class="sidebar__item">
-                      <a href="dshb-listing.html" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
-                          <i class="text-20 icon-list mr-15"></i>
-                          Create Coursess
-                      </a>
-                  </div>
-              <?php endif; ?>
+             
+
+
+              <div class="sidebar__item">
+                  <a href="dshb-listing.html" class="d-flex items-center text-17 lh-1 fw-500 -dark-text-white">
+                      <i class="text-20 icon-list mr-15"></i>
+                      Quiz Attempts
+                  </a>
+              </div>
+
               
 
               <div class="sidebar__item ">
@@ -111,7 +131,7 @@
 
           <div class="dashboard__main">
             <div class="dashboard__content bg-light-4">
-            <div class="row pb-50 mb-10">
+              <div class="row pb-50 mb-10">
                 <div class="col-auto">
 
                   <h1 class="text-30 lh-12 fw-700">Dashboard</h1>

@@ -12,7 +12,7 @@ $pagetitle = "Signup";
   
   <section class="form-page js-mouse-move-container">
     <div class="form-page__img bg-dark-1 lg:d-none" >
-      <img src="" alt="Terabyte Logo" class=" mb-30">
+      <img src="assets/img/logo-wh.png" alt="Terabyte Logo" class=" mb-30" style="width:50%; z-index:2000;">
     </div>
     
     
@@ -22,26 +22,26 @@ $pagetitle = "Signup";
           <div class="col-xl-6 col-lg-9">
             
             <div class="px-25 py-25 md:px-50 md:py-50 bg-white shadow-1 rounded-16">
-
-              <img src="" alt="Terabyte Logo" class="no-big-screen mb-30"> <!-- Terabyte Logo Icon (Only show on small screens) -->
+              <!-- Terabyte Logo Icon (Only show on small screens) -->
+              <img src="assets/img/logo-icon.png" alt="Terabyte Logo" class="no-big-screen mb-30" width="20%"> 
 
               <h3 class="text-30 lh-13">Sign Up</h3>
-              <p class="mt-10">Don't have an account yet? <a href="signup.html" class="text-purple-1">Sign up for free</a></p>
+              <p class="mt-10 mb-10">Create a free account and learn the best way possible.</p>
               
               
               <!-- Sign Up Form Begin-->
               <form class="input-form respondForm__form row y-gap-20 " method="POST" action="#">
                 <div class="col-12">
                   <label class="text-16 lh-1 fw-500 text-dark-1 mb-10">First Name</label>
-                  <input type="text" class="form-control" name="fname" value="<?php echo $fname; ?>" placeholder="Username or Email" required>
+                  <input type="text" class="form-control" name="fname" value="<?php echo $fname; ?>" placeholder="First Name" required>
                 </div>
                 <div class="col-12">
                 <label class="text-16 lh-1 fw-500 text-dark-1 mb-10">Last Name</label>
-                  <input type="text" class="form-control" name="lname" value="<?php echo $lname; ?>" placeholder="Username or Email" required>
+                  <input type="text" class="form-control" name="lname" value="<?php echo $lname; ?>" placeholder="Last Name" required>
                 </div>
                 <div class="col-12">
                   <label class="text-16 lh-1 fw-500 text-dark-1 mb-10"> Email</label>
-                  <input type="email" class="form-control" name="email" value="<?php echo $email; ?>" placeholder="Email" required>
+                  <input type="email" class="form-control" name="email" value="<?php echo $email; ?>" placeholder="Email Address" required>
                 </div>
                 
                 <div class=" mb-16">
@@ -64,9 +64,9 @@ $pagetitle = "Signup";
                   </div>
                 </div>
 
-                <p class=" fw-300 text-error-1">
+                <span class="text-error-1">
                     <?php echo $error; ?>
-                </p>
+                </span>
 
                 <div class="col-12">
                   <button type="submit" name="signup" id="submit" class="button -md -terabyte-1 text-white fw-500 w-1/1">
@@ -75,7 +75,7 @@ $pagetitle = "Signup";
                 </div>
 
               </form>
-              <p class="mt-10">Don't have an account yet? <a href="signup.html" class="text-purple-1">Sign up for free</a></p>
+              <p class="mt-10 mb-10">Have an account already? <a href="<?php echo LOGIN ?>" class="text-terabyte-1">Sign in here.</a></p>
               <!-- Sign Up Form Begin-->
               
               
