@@ -7,6 +7,26 @@
 
 -------------------------------------------------------------------*/
 
+document.addEventListener('DOMContentLoaded', function() {
+  // console.log('Script loaded.');
+
+  var currentUrl = window.location.href;
+  // console.log('Current URL:', currentUrl);
+
+  var sidebarLinks = document.querySelectorAll('.sidebar__item a');
+  // console.log('Sidebar links:', sidebarLinks);
+
+  sidebarLinks.forEach(function(link) {
+      // console.log('Link HREF:', link.href);
+      if (link.href === currentUrl) {
+          // console.log('Match found:', link.href);
+          link.parentElement.classList.add('-is-active');
+      }
+  });
+});
+
+
+
 // GSAP: turn off console warnings
 gsap.config({
 	nullTargetWarn: false
