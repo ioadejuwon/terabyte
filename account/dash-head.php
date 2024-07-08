@@ -18,7 +18,7 @@
     <meta name="description" content="Learn the best way possible." />
     
     <meta property="og:title" content="<?php echo $pagetitle.' - Terabyte' ?>"/>
-    <meta property="og:url" content="https://martville.app"/>
+    <meta property="og:url" content="https://terabyte.africa"/>
     <meta name="og:description" content="Learn the best way possible." />
 
     <meta name="twitter:site" content="@jointerabyte"/>
@@ -26,7 +26,7 @@
 
     <meta name="application-name" content="Terabyte"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-title" content="MartVille"/>
+    <meta name="apple-mobile-web-app-title" content="Terabyte"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta name="mobile-web-app-capable" content="yes"/>
     <meta name="msapplication-TileColor" content="#ffffff"/>
@@ -36,6 +36,12 @@
     <!-- <meta name="facebook-domain-verification" content="znfjwpevns3jhyzsnxuulz5q86paei"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta name="viewport" content="height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/general/icon_ab.png">
+    <link rel="icon" type="image/png" href="../assets/img/general/icon_ab.png">
+    <!-- <link rel="manifest" href="favicon/site.html"> -->
+    <link rel="mask-icon" href="../assets/img/general/icon_ab.png" color="#0010f7">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="../assets/fonts.googleapis.com/index.html">
