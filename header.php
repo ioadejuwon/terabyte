@@ -19,7 +19,7 @@
                             
                             <div class="header__logo ">
                                 <a data-barba href="index.html">
-                                    <img src="assets/img/logo_wh.svg" alt="logo" style="width:40%">
+                                    <img src="assets/img/general/logo_wh.svg" alt="logo" style="width:25%">
                                     <!-- <img class="-light-d-none" src="../assets/img/logo_wh.svg" alt="logo">
                                     <img class="-dark-d-none" src="../assets/img/logo_dg.svg" alt="logo" style="width:40%"> -->
                                 </a>
