@@ -5,7 +5,7 @@
                         <div class="row y-gap-20 justify-between items-center">
                             <div class="col-auto">
                                 <div class="footer-header__logo">
-                                    <img src="assets/img/general/logo-dark.svg" alt="logo">
+                                    <img src="assets/img/general/logo_ab.svg" alt="logo" style="width:30%;">
                                 </div>
                             </div>
                             <div class="col-auto">
