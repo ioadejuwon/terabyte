@@ -141,11 +141,11 @@
                               </div>
 
 
-                              <div class="col-md-6 d-none">
+                              <div class="col-md-6">
 
-                                <div class="text-16 lh-1  text-dark-1 mb-10">Birthday</div>
+                                <div class="text-16 lh-1  text-dark-1 mb-10">Email</div>
 
-                                <div class="text-18 fw-500 lh-1 mt-10"><?php echo $phone;?> </div>
+                                <div class="text-18 fw-500 lh-1 mt-10"><?php echo $email;?> </div>
                               </div>
 
 
