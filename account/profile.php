@@ -131,7 +131,11 @@
 
                                 <div class="text-18 fw-500 lh-1 mt-10"><?php echo $lname;?> </div>
                               </div>
-
+                              
+                              <div class="col-md-6">
+                                <div class="text-16 lh-1  text-dark-1 mb-10">Email</div>
+                                <div class="text-18 fw-500 lh-1 mt-10"><?php echo $email;?> </div>
+                              </div>
 
                               <div class="col-md-6">
 
@@ -140,23 +144,12 @@
                                 <div class="text-18 fw-500 lh-1 mt-10"><?php echo $phone;?> </div>
                               </div>
 
-
-                              <div class="col-md-6">
-
-                                <div class="text-16 lh-1  text-dark-1 mb-10">Email</div>
-
-                                <div class="text-18 fw-500 lh-1 mt-10"><?php echo $email;?> </div>
-                              </div>
-
-
                               <div class="col-md-6">
 
                                 <div class="text-16 lh-1  text-dark-1 mb-10">Address</div>
 
                                 <div class="text-18 fw-500 lh-1 mt-10"><?php echo $phone;?> </div>
                               </div>
-
-
 
                               <div class="col-md-6">
 
@@ -165,14 +158,12 @@
                                 <div class="text-18 fw-500 lh-1 mt-10"><?php echo $phone;?> </div>
                               </div>
 
-
                               <div class="col-md-6">
 
                                 <div class="text-16 lh-1  text-dark-1 mb-10">Country</div>
 
                                 <div class="text-18 fw-500 lh-1 mt-10"><?php echo $phone;?> </div>
                               </div>
-
 
                               <div class="col-12">
 
