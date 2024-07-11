@@ -29,8 +29,6 @@ include_once "../inc/drc.php";
 
 header('Content-Type: application/json');
 
-header('Content-Type: application/json');
-
 $response = array('status' => 'error', 'message' => 'An error occurred.');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

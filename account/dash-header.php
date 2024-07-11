@@ -22,7 +22,9 @@
             <div class="header__logo ml-30 md:ml-20">
                 <a data-barba href="<?php echo BASE_URL ?>">
                 <img class="-light-d-none" src="../assets/img/general/logo_wh.svg" alt="logo">
-                <img class="-dark-d-none" src="../assets/img/general/logo_ab.svg" alt="logo" style="width:25%">
+                <img class="-dark-d-none no-big-screen" src="../assets/img/general/icon_ab.png" alt="logo" width="50px">
+                <img class="-dark-d-none lg:d-none" src="../assets/img/general/logo2_ab.svg" alt="logo">
+                <!-- <img class="-dark-d-none  sm:d-block" src="../assets/img/general/logo_ab.png" alt="logo" style="width:25%"> -->
                 </a>
             </div>
             </div>
@@ -105,152 +107,152 @@
 
 
                 <div class="relative ">
-                <button class="d-flex items-center text-light-1 d-flex items-center justify-center size-50 rounded-16 -hover-dshb-header-light" data-el-toggle=".js-cart-toggle">
-                    <i class="text-20 icon icon-basket"></i>
-                </button>
+                    <button class="d-flex items-center text-light-1 d-flex items-center justify-center size-50 rounded-16 -hover-dshb-header-light" data-el-toggle=".js-cart-toggle">
+                        <i class="text-20 icon icon-basket"></i>
+                    </button>
 
-                <div class="toggle-element js-cart-toggle">
-                    <div class="header-cart bg-white -dark-bg-dark-1 rounded-8">
-                    <div class="px-30 pt-30 pb-10">
+                    <div class="toggle-element js-cart-toggle">
+                        <div class="header-cart bg-white -dark-bg-dark-1 rounded-8">
+                        <div class="px-30 pt-30 pb-10">
 
-                        <div class="row justify-between x-gap-40 pb-20">
-                        <div class="col">
-                            <div class="row x-gap-10 y-gap-10">
-                            <div class="col-auto">
-                                <img src="../assets/img/menus/cart/1.png" alt="image">
-                            </div>
-
+                            <div class="row justify-between x-gap-40 pb-20">
                             <div class="col">
-                                <div class="text-dark-1 lh-15">The Ultimate Drawing Course Beginner to Advanced...</div>
+                                <div class="row x-gap-10 y-gap-10">
+                                <div class="col-auto">
+                                    <img src="../assets/img/menus/cart/1.png" alt="image">
+                                </div>
 
-                                <div class="d-flex items-center mt-10">
-                                <div class="lh-12 fw-500 line-through text-light-1 mr-10">$179</div>
-                                <div class="text-18 lh-12 fw-500 text-dark-1">$79</div>
+                                <div class="col">
+                                    <div class="text-dark-1 lh-15">The Ultimate Drawing Course Beginner to Advanced...</div>
+
+                                    <div class="d-flex items-center mt-10">
+                                    <div class="lh-12 fw-500 line-through text-light-1 mr-10">$179</div>
+                                    <div class="text-18 lh-12 fw-500 text-dark-1">$79</div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                            </div>
-                        </div>
 
-                        <div class="col-auto">
-                            <button><img src="../assets/img/menus/close.svg" alt="icon"></button>
-                        </div>
-                        </div>
-
-                        <div class="row justify-between x-gap-40 pb-20">
-                        <div class="col">
-                            <div class="row x-gap-10 y-gap-10">
                             <div class="col-auto">
-                                <img src="../assets/img/menus/cart/2.png" alt="image">
+                                <button><img src="../assets/img/menus/close.svg" alt="icon"></button>
+                            </div>
                             </div>
 
+                            <div class="row justify-between x-gap-40 pb-20">
                             <div class="col">
-                                <div class="text-dark-1 lh-15">User Experience Design Essentials - Adobe XD UI UX...</div>
+                                <div class="row x-gap-10 y-gap-10">
+                                <div class="col-auto">
+                                    <img src="../assets/img/menus/cart/2.png" alt="image">
+                                </div>
 
-                                <div class="d-flex items-center mt-10">
-                                <div class="lh-12 fw-500 line-through text-light-1 mr-10">$179</div>
-                                <div class="text-18 lh-12 fw-500 text-dark-1">$79</div>
+                                <div class="col">
+                                    <div class="text-dark-1 lh-15">User Experience Design Essentials - Adobe XD UI UX...</div>
+
+                                    <div class="d-flex items-center mt-10">
+                                    <div class="lh-12 fw-500 line-through text-light-1 mr-10">$179</div>
+                                    <div class="text-18 lh-12 fw-500 text-dark-1">$79</div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
+
+                            <div class="col-auto">
+                                <button><img src="../assets/img/menus/close.svg" alt="icon"></button>
+                            </div>
+                            </div>
+
+                        </div>
+
+                        <div class="px-30 pt-20 pb-30 border-top-light">
+                            <div class="d-flex justify-between">
+                            <div class="text-18 lh-12 text-dark-1 fw-500">Total:</div>
+                            <div class="text-18 lh-12 text-dark-1 fw-500">$659</div>
+                            </div>
+
+                            <div class="row x-gap-20 y-gap-10 pt-30">
+                            <div class="col-sm-6">
+                                <button class="button py-20 -dark-1 text-white -dark-button-white col-12">View Cart</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="button py-20 -purple-1 text-white col-12">Checkout</button>
+                            </div>
                             </div>
                         </div>
-
-                        <div class="col-auto">
-                            <button><img src="../assets/img/menus/close.svg" alt="icon"></button>
-                        </div>
-                        </div>
-
-                    </div>
-
-                    <div class="px-30 pt-20 pb-30 border-top-light">
-                        <div class="d-flex justify-between">
-                        <div class="text-18 lh-12 text-dark-1 fw-500">Total:</div>
-                        <div class="text-18 lh-12 text-dark-1 fw-500">$659</div>
-                        </div>
-
-                        <div class="row x-gap-20 y-gap-10 pt-30">
-                        <div class="col-sm-6">
-                            <button class="button py-20 -dark-1 text-white -dark-button-white col-12">View Cart</button>
-                        </div>
-                        <div class="col-sm-6">
-                            <button class="button py-20 -purple-1 text-white col-12">Checkout</button>
-                        </div>
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
 
 
                 <div class="relative">
-                <a href="#" class="d-flex items-center text-light-1 justify-center size-50 rounded-16 -hover-dshb-header-light" data-el-toggle=".js-msg-toggle">
-                    <i class="text-24 icon icon-email"></i>
-                </a>
+                    <a href="#" class="d-flex items-center text-light-1 justify-center size-50 rounded-16 -hover-dshb-header-light" data-el-toggle=".js-msg-toggle">
+                        <i class="text-24 icon icon-email"></i>
+                    </a>
                 </div>
 
                 <div class="relative">
-                <a href="#" class="d-flex items-center text-light-1 justify-center size-50 rounded-16 -hover-dshb-header-light" data-el-toggle=".js-notif-toggle">
-                    <i class="text-24 icon icon-notification"></i>
-                </a>
+                    <a href="#" class="d-flex items-center text-light-1 justify-center size-50 rounded-16 -hover-dshb-header-light" data-el-toggle=".js-notif-toggle">
+                        <i class="text-24 icon icon-notification"></i>
+                    </a>
 
-                <div class="toggle-element js-notif-toggle" >
-                    <div class="toggle-bottom -notifications bg-white -dark-bg-dark-1 shadow-4 border-light rounded-8 mt-10">
-                    <div class="py-30 px-30">
-                        <div class="y-gap-40">
+                    <div class="toggle-element js-notif-toggle" >
+                        <div class="toggle-bottom -notifications bg-white -dark-bg-dark-1 shadow-4 border-light rounded-8 mt-10">
+                        <div class="py-30 px-30">
+                            <div class="y-gap-40">
 
-                        <div class="d-flex items-center ">
-                            <div class="shrink-0">
-                            <img src="../assets/img/dashboard/actions/1.png" alt="image">
+                            <div class="d-flex items-center ">
+                                <div class="shrink-0">
+                                <img src="../assets/img/dashboard/actions/1.png" alt="image">
+                                </div>
+                                <div class="ml-12">
+                                <h4 class="text-15 lh-1 fw-500">Your resume updated!</h4>
+                                <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
+                                </div>
                             </div>
-                            <div class="ml-12">
-                            <h4 class="text-15 lh-1 fw-500">Your resume updated!</h4>
-                            <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
+
+                            <div class="d-flex items-center border-top-light">
+                                <div class="shrink-0">
+                                <img src="../assets/img/dashboard/actions/2.png" alt="image">
+                                </div>
+                                <div class="ml-12">
+                                <h4 class="text-15 lh-1 fw-500">You changed password</h4>
+                                <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex items-center border-top-light">
+                                <div class="shrink-0">
+                                <img src="../assets/img/dashboard/actions/3.png" alt="image">
+                                </div>
+                                <div class="ml-12">
+                                <h4 class="text-15 lh-1 fw-500">Your account has been created successfully</h4>
+                                <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex items-center border-top-light">
+                                <div class="shrink-0">
+                                <img src="../assets/img/dashboard/actions/4.png" alt="image">
+                                </div>
+                                <div class="ml-12">
+                                <h4 class="text-15 lh-1 fw-500">You applied for a job Front-end Developer</h4>
+                                <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex items-center border-top-light">
+                                <div class="shrink-0">
+                                <img src="../assets/img/dashboard/actions/5.png" alt="image">
+                                </div>
+                                <div class="ml-12">
+                                <h4 class="text-15 lh-1 fw-500">Your course uploaded successfully</h4>
+                                <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
+                                </div>
+                            </div>
+
                             </div>
                         </div>
-
-                        <div class="d-flex items-center border-top-light">
-                            <div class="shrink-0">
-                            <img src="../assets/img/dashboard/actions/2.png" alt="image">
-                            </div>
-                            <div class="ml-12">
-                            <h4 class="text-15 lh-1 fw-500">You changed password</h4>
-                            <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex items-center border-top-light">
-                            <div class="shrink-0">
-                            <img src="../assets/img/dashboard/actions/3.png" alt="image">
-                            </div>
-                            <div class="ml-12">
-                            <h4 class="text-15 lh-1 fw-500">Your account has been created successfully</h4>
-                            <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex items-center border-top-light">
-                            <div class="shrink-0">
-                            <img src="../assets/img/dashboard/actions/4.png" alt="image">
-                            </div>
-                            <div class="ml-12">
-                            <h4 class="text-15 lh-1 fw-500">You applied for a job Front-end Developer</h4>
-                            <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex items-center border-top-light">
-                            <div class="shrink-0">
-                            <img src="../assets/img/dashboard/actions/5.png" alt="image">
-                            </div>
-                            <div class="ml-12">
-                            <h4 class="text-15 lh-1 fw-500">Your course uploaded successfully</h4>
-                            <div class="text-13 lh-1 mt-10">1 Hours Ago</div>
-                            </div>
-                        </div>
-
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
 

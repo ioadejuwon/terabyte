@@ -201,7 +201,8 @@
                                             <?php
                                             $sql_videos = mysqli_query($conn, "SELECT * FROM tera_course_videos WHERE unique_id = '{$_SESSION['unique_id']}' AND course_id = '$courseID' AND section_id = '$section_id'");
                                             while ($row_video = mysqli_fetch_assoc($sql_videos)) {
-                                                // $sectionname = $row_section['row_video'];
+                                                $video_name = $row_video['video_name'];
+                                                $video_path = '../'.$row_video['video_path'];
                                                 // $section_id = $row_section['section_id'];
                                             ?>
 
@@ -210,13 +211,19 @@
                                                   <div class="d-flex justify-center items-center size-30 rounded-full bg-purple-3 mr-10">
                                                     <div class="icon-play text-9"></div>
                                                   </div>
-                                                  <div>Introduction to the User Experience Course</div>
+                                                  <div><?php echo $video_name ?></div>
                                                 </div>
 
                                                 <div class="d-flex x-gap-20 items-center">
                                                   <!-- <a href="#" class="text-14 lh-1 text-purple-1 underline">Preview</a> -->
                                                   <!-- <a href="#" class="text-14 lh-1 text-purple-1 underline">5 question</a> -->
-                                                  <span href="#" class="text-14 lh-1 text-purple-1 ">03:56</span>
+                                                  <!-- <span href="#" class="text-14 lh-1 text-purple-1 ">03:56</span> -->
+                                                  <a href="<?php echo $video_path ?>" class="d-flex justify-center items-center js-gallery underline" data-gallery="gallery1">
+                                                    Preview
+                                                  </a>
+                                                  <a href="<?php echo $video_path ?>" class="d-flex justify-center items-center js-gallery underline" data-gallery="gallery1">
+                                                    Delete
+                                                  </a>
                                                 </div>
                                               </div>
                                             <?php 
@@ -227,12 +234,12 @@
 
                                           </div>
 
-                                          <form class="upload-video-form input-form mt-20" style="display: none;">
+                                          <form class=" row upload-video-form input-form mt-20" style="display: none;">
                                               <div class="col-6">
                                                 <input type="text" placeholder="Video Name" name="video_name" value="" class="form-control">
                                               </div>
                                               <div class="col-6">
-                                                <input type="file" placeholder="Click here to Upload video" name="video_file" class="form-control" >
+                                                <input type="file" placeholder="Click here to Upload video" name="video_file" class="form-control">
                                                 <input type="hidden" name="course_id" value="<?php echo $courseID ?>" class="form-control" >
                                               </div>
                                               

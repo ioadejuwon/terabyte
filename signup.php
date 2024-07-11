@@ -12,7 +12,7 @@ $pagetitle = "Signup";
   
   <section class="form-page js-mouse-move-container">
     <div class="form-page__img bg-dark-1 lg:d-none" >
-      <img src="assets/img/logo-wh.png" alt="Terabyte Logo" class=" mb-30" style="width:50%; z-index:2000;">
+    <img src="assets/img/general/logo_wh.svg" alt="Terabyte Logo" class=" mb-30" style="width:50%; z-index:2000;">
     </div>
     
     
@@ -23,7 +23,7 @@ $pagetitle = "Signup";
             
             <div class="px-25 py-25 md:px-50 md:py-50 bg-white shadow-1 rounded-16">
               <!-- Terabyte Logo Icon (Only show on small screens) -->
-              <img src="assets/img/logo-icon.png" alt="Terabyte Logo" class="no-big-screen mb-30" width="20%"> 
+              <img src="assets/img/general/icon_ab.png" alt="Terabyte Logo" class="no-big-screen mb-30" width="15%">
 
               <h3 class="text-30 lh-13">Sign Up</h3>
               <p class="mt-10 mb-10">Create a free account and learn the best way possible.</p>

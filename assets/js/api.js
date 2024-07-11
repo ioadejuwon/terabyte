@@ -138,8 +138,6 @@ $(document).ready(function() {
     });
 
 
-
-
     // Add section of the couse to the Database
     $('#courseSection').on('submit', function(e) {
         e.preventDefault(); // Prevent the default form submission
@@ -208,7 +206,7 @@ $(document).ready(function() {
 
 
 
-
+    // Delete a section for the curriculim
     $('.icon-bin').on('click', function(e) {
         e.preventDefault();
         var sectionId = $(this).data('id');
@@ -232,6 +230,8 @@ $(document).ready(function() {
             }
         });
     });
+
+    // Edit a section for the curriculim
 
     $('.icon-edit').on('click', function(e) {
         e.preventDefault();
@@ -274,6 +274,7 @@ $(document).ready(function() {
     });
 
 
+    // Add a lesson or video to a section for the curriculim
 
     $('.add-video').on('click', function(e) {
         e.preventDefault();

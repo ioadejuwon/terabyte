@@ -17,6 +17,7 @@ $s=4; //for category_id
 $t=4; //for category_id
 $u=3; //for category_id
 $v=3; //for category_id
+$w=2; //for category_id
 
 
 
@@ -49,3 +50,4 @@ $unique_id = getName($k);
 $categoryID = "tera-".getCatID($q)."-".getCatID($r);
 $courseID = "tb-".getCatID($s)."-".getCatID($t);
 $sectionID = "sec-".getCatID($u)."-".getCatID($v);
+$videoID = "vid-".getName($w)."-".getCatID($w);

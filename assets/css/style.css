@@ -41,6 +41,11 @@
   }
 }
 
+@media (min-width: 991px) {
+  .no-small-screen{
+    /* display: none !important; */
+  }
+}
 
 
 .accordion__content {

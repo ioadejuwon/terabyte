@@ -15,7 +15,7 @@ include_once "head.php";
   
   <section class="form-page js-mouse-move-container">
     <div class="form-page__img bg-dark-1 lg:d-none" >
-      <img src="assets/img/logo-wh.png" alt="Terabyte Logo" class=" mb-30" style="width:50%; z-index:2000;">
+      <img src="assets/img/general/logo_wh.svg" alt="Terabyte Logo" class=" mb-30" style="width:50%; z-index:2000;">
     </div>
     
     
@@ -26,7 +26,7 @@ include_once "head.php";
             
             <div class="px-25 py-25 md:px-25 md:py-25 bg-white shadow-1 rounded-16">
               <!-- Terabyte Logo Icon (Only show on small screens) -->
-              <img src="assets/img/logo-icon.png" alt="Terabyte Logo" class="no-big-screen mb-30" width="20%">
+              <img src="assets/img/general/icon_ab.png" alt="Terabyte Logo" class="no-big-screen mb-30" width="15%">
               <h3 class="text-30 lh-13">Login</h3>
               <p class="mt-10">Don't have an account yet? <a href="<?php echo SIGNUP ?>" class="text-purple-1">Sign up for free</a></p>
               
